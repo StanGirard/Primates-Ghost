@@ -1,6 +1,6 @@
 {
-    "name": "mediumish",
-    "description": "A Medium styled Ghost theme, perfect for multi authors.",
+    "name": "primates",
+    "description": "Primates Theme",
     "version": "1.0.29",
     "engines": {
         "ghost": ">=2.0.0",
