@@ -1,0 +1,56 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The big featured header --}}
+
+
+<div class="mainheading">
+		<h1 class="sitetitle"><span>{{@site.title}}</span></h1>
+		<p class="lead"><span>{{@site.description}}</span></p>
+</div>
+
+{{!-- The main content area on the homepage --}}
+
+
+{{!-- Featured Section --}}
+{{#is "home"}}
+<section class="featured-posts">
+	<div class="section-title">
+		<h2><span class="title">{{t "Featured"}}</span></h2>
+	</div>
+	<div class="row listfeaturedtag">
+		{{#get "posts" filter="featured:true" limit="all" as |featured|}}
+
+		{{#foreach featured}}
+				 {{!-- The tag below includes the markup for each post - partials/post-card-featured.hbs --}}
+				 {{> "post-card-featured"}}
+		 {{/foreach}}
+
+		 {{/get}}
+	</div>
+</section>
+{{/is}}
+
+{{!-- All Stories Section --}}
+<section class="recent-posts">
+	<div class="section-title">
+		<h2><span class="title">{{t "All Stories"}}</span> {{pagination}} <div class="clearfix"></div></h2>
+	</div>
+	<div class="row listrecent">
+		{{#foreach posts}}
+            {{^if featured}}
+                     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                     {{> "post-card"}}
+             {{/if}}
+		 {{/foreach}}
+	<div class="clearfix"></div>
+	</div>
+	<div class="bottompagination">
+		<div class="pointerup"><i class="fa fa-caret-up"></i></div>
+		{{pagination}}
+	</div>
+</section>
+
+{{!-- Explore Section --}}
+{{!-- The tag below includes the markup for explore area - partials/explore.hbs --}}
+{{> "explore"}}

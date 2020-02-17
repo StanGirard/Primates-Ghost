@@ -1,0 +1,8 @@
+current
+versions
+content/themes/mediumish-ghost/node_modules
+.ghost-cli
+.ghostpid
+content/data/ghost-local.db
+content/logs/http___localhost_2368__development.error.log
+content/logs/http___localhost_2368__development.log

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{!-- Brand icon --}}
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i%7CPT+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/mediumish.css"}}" />
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    <script src="{{asset "js/jquery.min.js"}}"></script>
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+
+    {{!-- The blog navigation links --}}
+    {{navigation}}
+
+    <div class="container">
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+        {{!-- Footer at the very bottom --}}
+        <div class="footer">
+      		<p class="pull-left">
+      			 <a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
+      		</p>
+      		
+      		<div class="clearfix">
+      		</div>
+      	</div>
+    </div>
+
+    {{!-- Ghost outputs important scripts and data with this tag --}}
+    {{ghost_foot}}
+    <script src="{{asset "js/bootstrap.bundle.min.js"}}"></script>
+    <script src="{{asset "js/masonry.pkgd.min.js"}}"></script>
+    <script src="{{asset "search/dist/ghost-finder.js"}}"></script>
+    <script>
+        new GhostFinder({
+            input: '#search-input',
+            showResult: '#search-result',
+            contentApiKey: '7bd81c0f8ec2ee9fbd87a0047b',
+        })
+    </script>
+    <script src="{{asset "js/mediumish.js"}}"></script>
+
+</body>
+</html>

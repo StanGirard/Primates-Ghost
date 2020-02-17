@@ -1,0 +1,22 @@
+{{!< default}}
+{{#post}}
+    <div class="mainheading {{#if feature_image}} homecover {{/if}}" {{#if feature_image}} style="background-image:url({{feature_image}});" {{/if}}>
+      <h1 class="sitetitle"><span>{{title}}</span></h1>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+  			<div class="article-post {{post_class}}">
+            {{content}}
+        </div>
+        <div class="after-post-tags">
+          {{#if tags}}
+          <ul class="tags">
+            {{#foreach tags}}
+             <li><a href="{{url}}" title="{{name}}" class="tag tag-{{comment_id}} {{slug}}">{{name}}</a></li>
+            {{/foreach}}
+          </ul>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+{{/post}}

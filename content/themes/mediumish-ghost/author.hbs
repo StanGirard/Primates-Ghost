@@ -1,0 +1,44 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{#author}}
+<div class="mainheading {{#if cover_image}} homecover {{/if}}" {{#if cover_image}} style="background-image:url({{cover_image}});" {{/if}}>
+    <div class="post-top-meta authorpage d-flex align-items-center">
+      {{#if profile_image}} 
+        <div><img class="author-thumb" src="{{profile_image}}" alt="{{name}}"></div>
+      {{/if}}
+      <div class="{{#if profile_image}} ml-5 {{/if}}">
+      <h1>{{name}}</h1>
+      {{#if location}}<i class="fa fa-globe"></i> {{location}} {{/if}}
+      {{#if website}} <span class="bull">&bull;</span> <a target="_blank" href="{{website}}">{{website}}</a> {{/if}}
+      {{#if bio}}<span class="author-description">{{bio}}</span>{{/if}}
+        {{#if facebook}} <a  target="_blank" href="{{facebook_url}}"><i class="fa fa-facebook"></i></a> {{/if}}
+        {{#if twitter}} &nbsp; <a target="_blank" href="{{twitter_url}}"><i class="fa fa-twitter"></i></a> {{/if}}
+        &nbsp; <a class="social-link social-link-rss" href="{{url absolute="true"}}rss/" target="_blank"><i class="fa fa-rss"></i></a> 
+       </div>
+    </div>
+</div>
+{{/author}}
+
+
+{{!-- List posts --}}
+<section class="recent-posts">
+	<div class="section-title">
+		<h2>{{#author}}<span class="title">{{name}}{{t "'s"}} {{t "Stories"}}</span>{{/author}} {{pagination}} <div class="clearfix"></div></h2>
+	</div>
+	<div class="row listrecent">
+		{{#foreach posts}}
+				 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+				 {{> "post-card"}}
+		 {{/foreach}}
+	<div class="clearfix"></div>
+	</div>
+  <div class="bottompagination">
+    <div class="pointerup"><i class="fa fa-caret-up"></i></div>
+    {{pagination}}
+  </div>
+</section>
+
+{{!-- Explore Section --}}
+{{!-- The tag below includes the markup for explore area - partials/explore.hbs --}}
+{{> "explore"}}
