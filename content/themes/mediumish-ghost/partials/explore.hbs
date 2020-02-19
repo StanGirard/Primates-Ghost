@@ -4,7 +4,7 @@
 			<h2 class="hidden-sm-down">{{t "Explore"}} &rarr;</h2>
 		</div>
 		<div class="col-md-8 align-self-center text-center">
-		{{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
+		{{#get "tags" limit="10" include="count.posts" order="count.posts desc"}}
     {{#foreach tags}}
         <a href="/tag/{{slug}}"># {{name}}</a>
     {{/foreach}}
