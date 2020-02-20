@@ -151,10 +151,12 @@
   <div class="container text-center">
     <img class="hidden-xs-down mr-2" src="{{#if @site.logo}} {{@site.logo}} {{else}} {{asset "img/logo.png"}} {{/if}}" alt="{{@site.title}}"> &nbsp;
     <span class="hidden-xs-down mr-2">{{t "Never miss a story from"}} <b>{{@site.title}}</b>, {{t "get updates in your inbox"}}.</span>
-    {{#if @labs.subscribers}} {{subscribe_form placeholder="E-mail address"}}
-    {{else}}
-    <a class="btn subscribe" target="_blank" href="http://cloud.feedly.com/#subscription/feed/{{@site.url}}/rss/">{{t "Get Updates"}}</a>
-    {{/if}}
+    {{#if @labs.members}}
+  <form data-members-form="signup">
+    <input data-members-email type="email" required="true"/>
+    <button type="submit">Sign up</button>
+  </form>
+{{/if}}
   </div>
 </div>
 
