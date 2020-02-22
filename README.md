@@ -1,8 +1,4 @@
-# Mediumish
-
-## Copyright & License
-
-Copyright (c) 2013-2019 WOW DEVELOPMENT.
+# Primates
 
 ### Changelog:
 
