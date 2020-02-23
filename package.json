@@ -1,7 +1,7 @@
 {
     "name": "primates",
     "description": "Primates Theme",
-    "version": "1.0.31",
+    "version": "1.0.32",
     "engines": {
         "ghost": ">=2.0.0",
         "ghost-api": "v2"
