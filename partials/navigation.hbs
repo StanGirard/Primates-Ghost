@@ -1,42 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation">
-
-   <div class="container">
-      
-      <!-- Begin Logo -->
-      <a class="navbar-brand" href="{{@site.url}}">
-         <img src="{{#if @site.logo}} {{@site.logo}} {{else}} {{asset "img/logo.png"}} {{/if}}" alt="logo">
-      </a>           
-      <!-- End Logo -->
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mediumishtopmenu" aria-controls="mediumishtopmenu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mediumishtopmenu">
-         
-         <!-- Begin Menu -->
-         <ul class="navbar-nav mr-auto">
-            {{#foreach navigation}}
-            <li class="nav-item nav-{{slug}}{{#if current}} nav-current{{/if}}">
-            <a class="nav-link" href="{{url absolute="true"}}">{{label}}</a>
-            </li>
-            {{/foreach}}
-         </ul>
-         <!-- End Menu -->
-         
-          <!-- Begin Search -->
-         <form id="nav-search-form" class="form-inline my-2 my-lg-0 hidden-md-down"> 
-           <input id="search-input" class="form-control mr-sm-2" type="text" placeholder="{{t "Search..."}}" />
-            <span type="button" value="search" class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span> 
-            <div id="search-result">
-              <ul id="search-results" class="search-results col-md-12" class="list-group">
-              </ul>
-            </div> 
-         </form>
-         <!-- End Search -->
-         
-      </div>
-      
-   </div>
-   
-</nav>
+<ul class="nav" role="menu">
+    {{#foreach navigation}}
+    <li role="menuitem"><a href="{{url absolute="true"}}" class="{{link_class for=(url) class=(concat "nav-" slug)}}">{{label}}</a></li>
+    {{/foreach}}
+</ul>

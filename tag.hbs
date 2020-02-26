@@ -1,40 +1,18 @@
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
-{{!-- The big featured header, it uses blog cover image as a BG if available --}}
 {{#tag}}
-<div class="mainheading {{#if feature_image}} homecover {{/if}}" {{#if feature_image}} style="background-image:url({{feature_image}});" {{/if}}>
-		<h1 class="sitetitle"><span>{{name}}</span></h1>
-		<p class="lead">
-      <span>{{#if description}}
-        {{description}}
-    {{else}}       
-        {{plural ../pagination.total empty=(t "A collection of posts") singular=(t "A collection of 1 post") plural=(t "A collection of % posts")}}
-    {{/if}}
-    </span>
-    </p>
-</div>
+
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "special_body_class"}}is-tag{{/contentFor}}
+
+<section class="tag site-archive">
+    <div class="container u-textAlignCenter">
+        <h1 class="site-archive-title u-textCapitalize u-fontSizeJumbo u-md-fontSize36 u-underline u-fontWeightMedium">{{name}}</h1>
+        {{#if description}}<p class="site-archive-des u-fontSize20">{{description}}</p>{{/if}}
+    </div>
+</section>
 {{/tag}}
 
-{{!-- All Stories Section --}}
-<section class="recent-posts">
-	<div class="section-title">
-		<h2><span class="title">"{{#tag}}{{name}}{{/tag}}" {{t "Stories"}}</span> {{pagination}} <div class="clearfix"></div></h2>
-	</div>
-	<div class="row listrecent">
-		{{#foreach posts}}
-				 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-				 {{> "post-card"}}
-		 {{/foreach}}
-	<div class="clearfix"></div>
-	</div>
-  <div class="bottompagination">
-    <div class="pointerup"><i class="fa fa-caret-up"></i></div>
-    {{pagination}}
-  </div>
-</section>
-
-
-{{!-- Explore Section --}}
-{{!-- The tag below includes the markup for explore area - partials/explore.hbs --}}
-{{> "explore"}}
+{{!-- The tag below includes the post loop - partials/loop.hbs --}}
+{{>"loop"}}

@@ -1,0 +1,26 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}is-podcast has-cover is-transparent{{/contentFor}}
+
+{{#post}}
+<section class="spc-header u-relative u-overflowHidden u-bgDark">
+    {{!-- Featured Image - partials/helper/helper-image-cover.hbs --}}
+    {{#if feature_image}}{{> "helper/helper-image-cover"}}{{/if}}
+
+    <div class="spc-h-inner u-textColorWhite u-maxWidth1040 u-container u-relative zindex3 u-textAlignCenter">
+        <h1 class="spc-h-t animated bounceIn">{{title}}</h1>
+        {{content}}
+    </div>
+</section>
+{{/post}}
+
+<div class="u-container">
+    <div class="feed-entry-content u-maxWidth1000 u-marginAuto u-paddingTop30">
+        <div class="feed-entry-wrap row">
+            {{!-- Sidebar - partials/story/story-podcast.hbs --}}
+            {{#foreach posts}} {{>"story/story-podcast"}} {{/foreach}}
+        </div>
+    </div>
+</div>

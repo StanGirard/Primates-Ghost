@@ -1,0 +1,19 @@
+{{!< default}}
+
+<div class="container u-paddingTop30">
+    <div class="row">
+        <div class="col s12 col-left">
+            <div class="feed-entry-content">
+                <div class="feed-entry-wrap slist">
+                    {{#foreach posts}}
+                        {{!-- Story - partials/story/story-grid.hbs --}}
+                        {{>"story/story-grid"}}
+                    {{/foreach}}
+                </div>
+            </div>
+        </div>
+
+        {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
+        {{>"sidebar/sidebar"}}
+    </div>
+</div>
