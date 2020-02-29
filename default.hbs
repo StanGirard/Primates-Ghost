@@ -29,7 +29,7 @@
             if (localStorage.getItem('selected-theme') === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark')
             } else {
-                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && localStorage.getItem('selected-theme') === 'undefined') {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)  {
                     document.documentElement.setAttribute('data-theme', 'dark')
                 } else {
                     document.documentElement.setAttribute('data-theme', 'light');
