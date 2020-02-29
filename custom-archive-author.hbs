@@ -14,7 +14,7 @@
         </header>
         {{/post}}
 
-        {{#get "authors" limit="all"}}
+        {{#get "authors" limit="all" include='count.posts' order='count.posts desc'}}
         {{#foreach authors}}
 
         <div class="col s12 m6 l4 u-flexColumnTop">
