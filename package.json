@@ -1,8 +1,8 @@
 {
   "name": "simply",
   "description": "simply theme for ghost by @GodoFredoNinja",
-  "demo": "https://godofredo.ninja",
-  "version": "0.3.0",
+  "demo": "https://primates.dev",
+  "version": "0.3.1",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
@@ -12,9 +12,9 @@
     "desktop": "screenshot.jpg"
   },
   "author": {
-    "name": "GodoFredo",
-    "email": "hello@godofredo.ninja",
-    "url": "https://godofredo.ninja"
+    "name": "Stan Girard",
+    "email": "stan@primates.dev",
+    "url": "https://primates.dev"
   },
   "gpm": {
     "type": "theme",
