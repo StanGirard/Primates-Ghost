@@ -29,7 +29,12 @@
             if (localStorage.getItem('selected-theme') === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark')
             } else {
-                document.documentElement.setAttribute('data-theme', 'light');
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && localStorage.getItem('selected-theme') === 'undefined') {
+                    document.documentElement.setAttribute('data-theme', 'dark')
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+                
             }
         }
     </script>
