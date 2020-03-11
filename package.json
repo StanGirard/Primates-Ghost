@@ -2,7 +2,7 @@
   "name": "simply",
   "description": "simply theme for ghost by @GodoFredoNinja",
   "demo": "https://primates.dev",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
@@ -27,8 +27,7 @@
   "keywords": [
     "ghost",
     "theme",
-    "ghost-theme",
-    "GodoFredoNinja"
+    "ghost-theme"
   ],
   "repository": {
     "type": "git",
