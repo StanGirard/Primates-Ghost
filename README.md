@@ -1,4 +1,4 @@
-# Simply free theme for [Ghost](https://github.com/tryghost/ghost/)
+# Primates theme for [Ghost](https://github.com/tryghost/ghost/)
 
 [![Ghost version](https://img.shields.io/badge/Ghost-3.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://www.paypal.me/godofredoninja)
