@@ -1,27 +1,7 @@
 # Primates theme for [Ghost](https://github.com/tryghost/ghost/)
 
 [![Ghost version](https://img.shields.io/badge/Ghost-3.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://www.paypal.me/godofredoninja)
-[![Buy Me A Coffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-%23FF813F)](https://www.buymeacoffee.com/GodoFredoNinja)
 
-> *Simple and Elegant Theme.*
-
-Hello :smile: , I created this theme for Ghost with inspiration from [Medium](https://medium.com/).
-It is available for free so you can use on your site. If you have any suggestions to improve the theme,  you can send me a tweet [@GodoFredoNinja](https://goo.gl/y3aivK)
-
-## If you have a :heart: and value my work. :pray: Please, help me with a small donation on [Paypal](https://www.paypal.me/godofredoninja) or [Here](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url). It'll help motivate me to update the theme with many improvements
-
-[![donate](./donate.gif)](https://www.paypal.me/godofredoninja)
-
-:arrow_right: If you still don't have a **Hosting for your Ghost**. Use [Digital Ocean](https://m.do.co/c/710a27a3b3de) using my [referral link]((https://m.do.co/c/710a27a3b3de)) and you will get free a **$50 credit** to use in [Digital Ocean]((https://m.do.co/c/710a27a3b3de)). This way you will also be helping me.
-
-[![Simply free theme for ghost](./screenshot.jpg)](https://godofredo.ninja)
-
-## Demo
-
-You can see Simply in action on my Page [Demo](https://godofredo.ninja)
-
-If for some reason I'm using a theme other than simply. then you can see the screenshots in [behance](http://bit.ly/simply-from-github-to-behance)
 
 ## Featured
 
@@ -726,18 +706,3 @@ Take a look at the [Prismjs Supported Language List](http://prismjs.com/#languag
 
 ![Simply Prismjs](./documentation/prismjs.jpg)
 
-### Credits
-
-- [Hodor AMP](https://github.com/godofredoninja/Hodor-AMP-Ghost)
-- [Normalize](https://necolas.github.io/normalize.css/)
-- [Ghost Search](https://github.com/HauntedThemes/ghost-search)
-- [Prismjs](http://prismjs.com/)
-- [Medium Zoom](https://github.com/francoischalifour/medium-zoom)
-- [Lazysizes](https://github.com/aFarkas/lazysizes)
-- [Fonts](https://fonts.google.com/?query=domine&selection.family=Domine|Rubik)
-- [Safari Light - Mockup](https://www.uplabs.com/posts/safari-light-version)
-- [Safari Dark - Mockup](https://www.uplabs.com/posts/safari-dark-mode)
-
-## Copyright & License
-
-Copyright (c) 2017-2019 GodoFredo - Released under the [GPLv3 license](LICENSE)
